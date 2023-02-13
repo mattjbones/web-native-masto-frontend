@@ -1,0 +1,65 @@
+---
+layout: page
+title: Home
+---
+
+<h1>Web Native - Masto Frontend</h1>
+
+<template id="post-template">
+    <style>
+        article {
+            max-width: 600px;
+            padding: 8px;
+            border-bottom: 1px;
+            border-top: 0px;
+            border-right: 0px;
+            border-left: 0px;
+            border-style: solid;
+            border-color: gainsboro;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2,
+        h3 {
+            display: inline-block;
+        }
+
+        h2 {
+            margin-right: 8px;
+
+        }
+
+        h3 {
+            font-style: italic;
+        }
+
+        #user-details {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        #name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-shrink: 1;
+        }
+    </style>
+    <article>
+        <span id="user-details">
+            <h2 id="name"></h2>
+            <h3 id="username"></h3>
+        </span>
+        <p id="body"></p>
+        <p>
+            Replies <span id="replies"></span>
+            Favourites <span id="favs"></span>
+        </p>
+    </article>
+</template>
+
+<masto-posts post-template="post-template" />
+
+<script src="/components/post/index.js"></script>
+<script src="/components/posts/index.js"></script>

@@ -1,0 +1,6 @@
+destination: site
+baseurl: /
+exclude: 
+ - builder
+ - site # this should be implicit
+ - .gitignore
